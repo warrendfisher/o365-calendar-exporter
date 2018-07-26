@@ -1,0 +1,40 @@
+<h2>Calendar</h2>
+{{#if message}}
+<p>{{message}}</p>
+{{/if}}
+{{#if d3chart}}
+<div class="d3chart">
+    <p>d3chart:&nbsp;{{d3chart}}</p>
+</div>
+{{/if}}
+<div class="datatable">
+<form action="/xlsexport" method="GET">
+    <input class="btn btn-primary btn-large" type="submit" value="Export to Excel" />
+    <table class="table">
+        <thead class="thead-light">
+            <th scope="col">Company</th>
+            <th scope="col">Date</th>
+            <!--<th scope="col">Start Date/Time</th>-->
+            <!--<th scope="col">End Date/Time</th>-->
+            <th scope="col">Total Hours</th>
+            <th scope="col">Title</th>
+            <th scope="col">Location</th>
+            <th scope="col">Detail</th>
+        </thead>
+        <tbody>
+            {{#each events}}
+            <tr>
+                <td>{{this.company}}</td>
+                <td>{{this.date}}</td>
+                <!--<td>{{this.startDate}}</td>-->
+                <!--<td>{{this.endDate}}</td>-->
+                <td>{{this.totalTime}}</td>
+                <td>{{this.calendarTitle}}</td>
+                <td>{{this.location}}</td>
+                <td>{{this.body}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</form>
+</div>

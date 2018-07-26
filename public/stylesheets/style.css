@@ -1,0 +1,34 @@
+pre {
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.svg-chart .background {
+    shape-rendering: crispEdges;
+    stroke: #ccc;
+    fill: #fdfdfd;
+    stroke-width: 1px;
+}
+
+.svg-chart .bar {
+    fill: #4682B4;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono);
+.slice text {
+    font-family: Droid Sans;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.form-comment {
+    font-size: small;
+    color: slategray;
+}
+
+.user-welcome {
+    font-size: large;
+    font-weight: bold;
+}

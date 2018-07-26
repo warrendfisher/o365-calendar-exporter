@@ -1,0 +1,43 @@
+<div class="jumbotron">
+    <h1>Office365 Calendar Exporter</h1>
+    {{#if user}}
+    <p class="user-welcome">Welcome {{user}}!</p>
+    {{else}}
+    <a class="btn btn-primary btn-large" href="{{signInUrl}}">Click here to login</a>
+    {{/if}}
+    <p class="lead">This app allows you to export Outlook Calendar data for timehseet creation (or other) purposes.</p>
+</div>
+{{#if user}}
+<div class="jumbotron-form">
+    <form action="/calendar" method="POST">
+        <table>
+            <tr>
+                <td class="form-label">From Date:</td>
+                <td>
+                    <input type="date" name="fromDate" placeholder="yyyy//mm/dd"></input>
+                </td>
+                <td class="form-comment">Default: Today - 31 days</td>
+            </tr>
+            <tr>
+                <td class="form-label">To Date:</td>
+                <td>
+                    <input type="date" name="toDate" placeholder="yyyy//mm/dd"></input>
+                </td>
+                <td class="form-comment">Default: Today</td>
+            </tr>
+            <tr>
+                <td class="form-label">Title Format:</td>
+                <td>
+                    <select name="titleTemplate">
+                        <option value="0">Calendar Title (No filtering OR extraction on calendar title format)</option>
+                        <option value="1" selected="selected">[CUSTOMER] Calendar Title (extracts the customer from the parentheses)</option>
+                    </select>
+                </td>
+                <td class="form-comment">This selection will be used to filter which calendar entries will be returned.</td>
+            </tr>
+        </table>
+        <!--<br>-->
+        <input class="btn btn-primary btn-large" type="submit" value="Search" />
+    </form>
+</div>
+{{/if}}
