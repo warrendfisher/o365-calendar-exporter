@@ -25,13 +25,10 @@ Create a '.env' file in the project root.
 Your '.env' file should have the following structure and should be populated with the information from your Office 365 'config' page.
 
 ```.env
-**APP_ID**=<app_id_uuid>
-
-**APP_PASSWORD**=<some_app_password>
-
-**APP_SCOPES**=<string of authorised scopes for the app id>   eg. 'openid email profile offline_access User.Read Calendars.Read'
-
-**REDIRECT_URI**=http://localhost:3000/authorize
+APP_ID=<app_id_uuid>
+APP_PASSWORD=<some_app_password>
+APP_SCOPES=<string of authorised scopes for the app id>   eg. 'openid email profile offline_access User.Read Calendars.Read'
+REDIRECT_URI=http://localhost:3000/authorize
 ```
 
 ---
