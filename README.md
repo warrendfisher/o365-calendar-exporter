@@ -35,3 +35,12 @@ REDIRECT_URI=http://localhost:3000/authorize
 In order to generate and authorise your API access to Office365 use the following link:
 
 > To be documented and confirmed
+Follow this link:
+ [Use the Microsoft Graph API] (https://docs.microsoft.com/en-us/graph/use-the-api)
+
+ - First register
+
+ [Register your app with the Azure AD v2.0 endpoint] (https://docs.microsoft.com/en-us/graph/auth-register-app-v2)
+ Sign in with your Office 365 account and follow the wizard to register your app.
+
+ - 
