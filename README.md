@@ -15,11 +15,8 @@ Create a '.env' file in the project root.
   NOTE: This has been consciously excluded in my .gitignore file so that your Office365 Graph API parameters, as below, are not shared with all and sundry.:
 
     APP_ID
-
     APP_PASSWORD
-
     APP_SCOPES
-
     REDIRECT_URI
 
 Your '.env' file should have the following structure and should be populated with the information from your Office 365 'config' page.
