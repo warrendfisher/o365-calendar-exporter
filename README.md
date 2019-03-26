@@ -32,3 +32,4 @@ Your '.env' file should have the following structure and should be populated wit
 ### Office365 App API Config
 In order to generate and authorise your API access to Office365 use the following link:
 
+> To be documented and confirmed
