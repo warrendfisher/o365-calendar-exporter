@@ -103,7 +103,10 @@ router.post('/', async function(req, res) {
                 // Do stuff with arr[i]
                 var match;
                 var calendarEntry = new Object();
-                if (titleTemplate == 0) { //NO filtering NOR Company Extraction
+                var theSubject = result.value[i].subject;
+                console.log("titleTemplate: ", titleTemplate);
+                console.log("subject: ", theSubject);
+                if (titleTemplate == 0 && theSubject) { //NO filtering NOR Company Extraction
                     calendarEntry.company = "";
                     calendarEntry.calendarTitle = result.value[i].subject;
                     calendarEntry.date = moment(new Date(result.value[i].start.dateTime)).local().format("YYYY/MM/DD");
@@ -115,7 +118,7 @@ router.post('/', async function(req, res) {
                     calendarEntry.body = cleanBody.replace(/\r|\n/g, '');
                     matchArray.push(calendarEntry);
                 }
-                if (titleTemplate == 1) { //Filter AND Extract Company - [COMPANY] Calendar Title
+                if (titleTemplate == 1 && theSubject) { //Filter AND Extract Company - [COMPANY] Calendar Title
                     if (result.value[i].subject.match(strPattern)) {
                         var match = strPattern.exec(result.value[i].subject);
                         calendarEntry.company = match[1].trim();
