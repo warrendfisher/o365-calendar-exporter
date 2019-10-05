@@ -44,3 +44,10 @@ Follow this link:
  Sign in with your Office 365 account and follow the wizard to register your app.
 
  - 
+
+### Run the application
+
+To start the nodejs app...
+open command prompt to the project root path
+run
+  npm start
